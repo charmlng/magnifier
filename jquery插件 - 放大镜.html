@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jquery插件 - 放大镜</title>
+		<!--
+			放大镜插件：
+			jqzoom.css
+			jqzoom.js
+			
+			放大镜插件实现原理：
+			1，当页面直接打开的时候会加载静态资源 - 小图片（节省加载时间和资源）
+			2.通过鼠标的移动触发事件 - 通过超链接跳转到大图
+		-->
+		<!--导入插件-->
+		<script type="text/javascript" src="js/jquery-1.8.2.js" ></script>
+		<script type="text/javascript" src="js/jquery.jqzoom-core.js" ></script>
+		<link rel="stylesheet" type="text/css" href="js/jquery.jqzoom.css"/>
+	</head>
+	<body>
+		<!--架构代码-->
+		<a class="MYCLASS" href="img/triumph_big1.jpg">
+			<img src="img/triumph_thumb1.jpg" title="IMAGE TITLE"/>
+		</a>
+	</body>
+	<!--js-->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".MYCLASS").jqzoom();
+		});
+	</script>
+</html>
